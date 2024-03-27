@@ -39,7 +39,7 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 
 ---
 
-<h3>Ferramentas Utilizadas</h3>
+<h3>Ferramentas Utilizadas:</h3>
 
 <p align="center">
 <img src= "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="5.8%"/>
