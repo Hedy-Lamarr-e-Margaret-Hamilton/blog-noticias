@@ -8,13 +8,19 @@ class Noticia(models.Model):
         ('Economia', 'Economia'),
     )
 
+    status = (
+        ('Pendente', 'Pendente'),
+        ('Aprovado', 'Aprovado'),
+        ('Reprovado', 'Reprovado'),
+    )
+
+    titulo = models.CharField(max_length=50)
+    data = models.DateField(help_text='dd/mm/aaaa')
     categoria = models.CharField(max_length=50, choices=categorias)
     conteudo = models.TextField()
-    data = models.DateField(help_text='dd/mm/aaaa')
     destaque = models.BooleanField()
     imagem = models.CharField(max_length=50)
-    status = models.CharField(max_length=50)
-    titulo = models.TextField()
+    status = models.CharField(max_length=50, choices=status)
 
 def __str__(self):
     return f'{self.titulo}: {self.data}'
