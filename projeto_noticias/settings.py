@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'base',
     
     'comentarios',
+    'usuario'
 ]
 
 MIDDLEWARE = [
