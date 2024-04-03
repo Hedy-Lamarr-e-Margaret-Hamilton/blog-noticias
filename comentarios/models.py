@@ -8,7 +8,7 @@ class Comentario(models.Model):
     email = models.EmailField(max_length=50)
     noticia = models.TextField()
     texto = models.TextField()
-    data = models.DateTimeField(auto_now_add=True)
+    data = models.DateTimeField(help_text='dd/mm/yyyy')
     
     def __str__(self):
         return f'{self.noticia}:{self.nome}, {self.texto}'

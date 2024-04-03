@@ -20,4 +20,4 @@ def criar_coment(request):
         'comentarios': comentarios,
     }
 
-    return render(request, 'criar-coment.html', contexto)
+    return render(request, 'criar_coment.html', contexto)

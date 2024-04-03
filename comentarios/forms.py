@@ -1,6 +1,6 @@
 from typing import Any
 from django import forms 
-from comentarios.models import Coment
+from comentarios.models import Comentario
 from datetime import date
 
 
@@ -11,5 +11,5 @@ class ComentForm(forms.ModelForm):
         if data < hoje:
             raise forms.ValidationError('Data inválida')
     class Meta:
-        model = Coment
-        fields = ['nome', 'email', 'text','noticia','data']
+        model = Comentario
+        fields = ['nome', 'email', 'texto','noticia','data']
