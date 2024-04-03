@@ -1,18 +1,27 @@
 {% extends "layout.html" %}
+{% load bootstrap5 %}
 
-{% bloc content %}
+{% block content %}
 
-    <h1 class="text-body-emphasis">Comentario</h1>
+    <h1 class="text-body-emphasis">Comentários</h1>
 
     {% if sucesso %}
-      <p class="alert alert-success">Comentario criado com sucesso!</p>
+      <p class="alert alert-success">Comentário criado com sucesso!</p>
     {% endif %}
 
-<form action="" method="POST" id="form"> 
-    {% {% csrf_token %}
-    {{ form.as_p}}
+  <form action="" method="POST" id="form"> 
+    {% csrf_token %}
+    {% bootstrap_form form %}
 
-    <button type="submit" class="btn btn-primary btn-block">Inserir comentario</button>
-</form>
+    <button type="submit" class="btn btn-primary btn-block">Inserir comentário</button> 
+
+  </form>
+
+  <hr>
+  <br>
+  <h1> Comentários cadastrados </h1> <br> 
+  {% for comentario in comentarios %}
+    <p> {{comentario.comentario}}
+  {% endfor %}
 
 {% endblock %}
