@@ -6,7 +6,7 @@ from comentarios.models import Comentario
 
 @admin.register(Comentario)
 class ComentAdmin(admin.ModelAdmin):
-    list_display = ['nome', 'email','texto', 'noticia','data']
+    list_display = ['nome', 'email','texto','noticia', 'data']
     list_filter = ['data']
-    search_fields = ['nome']
+    search_fields = ['noticia', 'nome']
     

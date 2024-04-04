@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-{% load bootstrap5 %}
 
 {% block content %}
 
@@ -11,17 +10,10 @@
 
   <form action="" method="POST" id="form"> 
     {% csrf_token %}
-    {% bootstrap_form form %}
+    {{ form.as_p}}
 
     <button type="submit" class="btn btn-primary btn-block">Inserir comentário</button> 
 
   </form>
-
-  <hr>
-  <br>
-  <h1> Comentários cadastrados </h1> <br> 
-  {% for comentario in comentarios %}
-    <p> {{comentario.comentario}}
-  {% endfor %}
 
 {% endblock %}
