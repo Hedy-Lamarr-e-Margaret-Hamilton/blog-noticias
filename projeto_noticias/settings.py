@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap5',
     'base',
     'noticias'
+    'comentarios',
+    'usuario'
 ]
 
 MIDDLEWARE = [
