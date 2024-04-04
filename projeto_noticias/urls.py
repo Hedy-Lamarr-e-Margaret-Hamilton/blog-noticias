@@ -21,5 +21,6 @@ from base.views import inicio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
-    path('comentarios/', include('comentarios.urls', namespace='comentarios'))
+    path('comentarios/', include('comentarios.urls')),
+
 ]
