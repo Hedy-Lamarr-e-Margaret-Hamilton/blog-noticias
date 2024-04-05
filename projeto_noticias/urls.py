@@ -21,6 +21,7 @@ from base.views import inicio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
+    path('noticia/', include('noticias.urls', namespace='noticicas')),
     path('comentarios/', include('comentarios.urls', namespace='comentarios')),
     path('usuario/', include('usuario.urls', namespace='usuario'))
 ]
