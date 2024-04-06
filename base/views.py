@@ -11,6 +11,10 @@ def inicio(request):
 def noticia(request):
     return render(request, 'criar_noticia.html', {})
 
+def pesquisar_noticias_por_categoria(request, categoria):
+    noticias = Noticia.objects.filter(categoria=categoria)
+    return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'categoria': categoria})
+
 def noticia_por_categoria(request, categoria=None):
     noticias = Noticia.objects.all()  # Retorna todas as notícias por padrão
     
@@ -26,6 +30,11 @@ def noticia_por_categoria(request, categoria=None):
     }
 
     return render(request, 'noticia_por_categoria.html', {'noticias': noticias, 'categoria': categoria, 'categoria_info': categorias.get(categoria)})
+
+def noticia_por_id(request, id):
+    # Busca a notícia pelo ID no banco de dados
+    noticia = Noticia.objects.get(pk=id)
+    return render(request, 'noticia_por_id.html', {'noticia': noticia})
 
 def comentario(request):
     return render(request, 'comentario.html')

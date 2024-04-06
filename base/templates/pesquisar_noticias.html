@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Notícias por Categoria - {{ categoria }}</title>
+</head>
+<body>
+    <h1>Notícias da Categoria: {{ categoria }}</h1>
+    <ul>
+        {% for noticia in noticias %}
+            <li>
+                <h2>{{ noticia.titulo }}</h2>
+                <p>{{ noticia.conteudo }}</p>
+                <p>Autor - {{ noticia.autor }} - {{ noticia.data }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
