@@ -2,16 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Notícias por Categoria - {{ categoria }}</title>
+    <title>Pesquisar Notícias por Categoria</title>
 </head>
 <body>
-    <h1>Notícias da Categoria: {{ categoria }}</h1>
+    <h1>Pesquisar Notícias por Categoria</h1>
+    <!-- Links para cada categoria -->
+    <ul>
+        <li><a href="{% url 'pesquisar_noticias_por_categoria' categoria='tecnologia' %}">Tecnologia</a></li>
+        <li><a href="{% url 'pesquisar_noticias_por_categoria' categoria='economia' %}">Economia</a></li>
+        <li><a href="{% url 'pesquisar_noticias_por_categoria' categoria='cultura' %}">Cultura</a></li>
+        <li><a href="{% url 'pesquisar_noticias_por_categoria' categoria='politica' %}">Política</a></li>
+        <li><a href="{% url 'pesquisar_noticias_por_categoria' categoria='esportes' %}">Esportes</a></li>
+    </ul>
+
+    <!-- Aqui você pode exibir as notícias pesquisadas, se desejar -->
+    <h2>Notícias Encontradas:</h2>
     <ul>
         {% for noticia in noticias %}
             <li>
-                <h2>{{ noticia.titulo }}</h2>
+                <h3>{{ noticia.titulo }}</h3>
                 <p>{{ noticia.conteudo }}</p>
-                <p>Autor - {{ noticia.autor }} - {{ noticia.data }}</p>
+                <p>Autor: {{ noticia.autor }} - Data: {{ noticia.data }}</p>
             </li>
         {% endfor %}
     </ul>

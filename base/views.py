@@ -12,8 +12,9 @@ def noticia(request):
     return render(request, 'criar_noticia.html', {})
 
 def pesquisar_noticias_por_categoria(request, categoria):
+    # Pesquisar notícias com base na categoria
     noticias = Noticia.objects.filter(categoria=categoria)
-    return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'categoria': categoria})
+    return render(request, 'pesquisar_noticias.html', {'noticias': noticias})
 
 def noticia_por_categoria(request, categoria=None):
     noticias = Noticia.objects.all()  # Retorna todas as notícias por padrão
