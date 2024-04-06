@@ -46,11 +46,11 @@
                 </div>
                 <div class="col-xs-12 col-md-2">
                     <h5>Assuntos do momento</h5>
-                    <a href="/tecnologia"><img class="img_trending_topics" src="/static/images/tecnologia.jpg" alt=""></a>
-                    <a href="/economia"><img class="img_trending_topics" src="/static/images/economia.jpg" alt=""></a>
-                    <a href="/cultura"><img class="img_trending_topics" src="/static/images/cultura.jpg" alt=""></a>
-                    <a href="/politica"><img class="img_trending_topics" src="/static/images/politica.jpg" alt=""></a>
-                    <a href="/esportes"><img class="img_trending_topics" src="/static/images/esportes.jpg" alt=""></a>
+                    <a href="{% url 'noticia_por_categoria' categoria='tecnologia' %}"><img class="img_trending_topics" src="/static/images/tecnologia.jpg" alt=""></a>
+                    <a href="{% url 'noticia_por_categoria' categoria='economia' %}"><img class="img_trending_topics" src="/static/images/economia.jpg" alt=""></a>
+                    <a href="{% url 'noticia_por_categoria' categoria='cultura' %}"><img class="img_trending_topics" src="/static/images/cultura.jpg" alt=""></a>
+                    <a href="{% url 'noticia_por_categoria' categoria='politica' %}"><img class="img_trending_topics" src="/static/images/politica.jpg" alt=""></a>
+                    <a href="{% url 'noticia_por_categoria' categoria='esportes' %}"><img class="img_trending_topics" src="/static/images/esportes.jpg" alt=""></a>
 
                 </div>
                 <div class="col-xs-12 col-md-5 bottom-row text-center">

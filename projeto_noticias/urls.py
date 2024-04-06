@@ -16,18 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from base.views import inicio, tecnologia, politica, economia, esportes, cultura
+from base.views import inicio, noticia_por_categoria, tecnologia, politica, economia, esportes, cultura
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
-    path('noticia/', include('noticias.urls', namespace='noticicas')),
+    #path('noticia/', include('noticias.urls', namespace='noticicas')),
+    path('noticia/categoria/<str:categoria>/', noticia_por_categoria, name='noticia_por_categoria'),
     path('comentarios/', include('comentarios.urls', namespace='comentarios')),
     path('usuario/', include('usuario.urls', namespace='usuario')),
-    path('tecnologia/', tecnologia, name="tecnologia"),
-    path('politica/', politica, name="politica"),
-    path('economia/', economia, name="economia"),
-    path('esportes/', esportes, name="esportes"),
-    path('cultura/', cultura, name="cultura")
+    path('noticia/categoria/<str:categoria>/', noticia_por_categoria, name='noticia_por_categoria'),
+    # Adicione URLs para cada categoria
+    path('tecnologia/', noticia_por_categoria, {'categoria': 'tecnologia'}, name='tecnologia'),
+    path('politica/', noticia_por_categoria, {'categoria': 'politica'}, name='politica'),
+    path('economia/', noticia_por_categoria, {'categoria': 'economia'}, name='economia'),
+    path('esportes/', noticia_por_categoria, {'categoria': 'esportes'}, name='esportes'),
+    path('cultura/', noticia_por_categoria, {'categoria': 'cultura'}, name='cultura'),
+   
     
 ]
