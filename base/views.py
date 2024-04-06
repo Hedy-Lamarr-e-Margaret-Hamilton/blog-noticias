@@ -1,22 +1,28 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 
 def inicio(request):
     return render(request, 'index.html')
 
-def pesquisa(request):
-    return render(request, 'pesquisa.html', {})
+def noticia(request):
+    return render(request, 'criar_noticia.html', {})
 
-def detalhes_noticia(request, id):
-    return HttpResponse(f"Detalhes da notícia com ID {id}")
+def comentario(request):
+    return render(request, 'comentario.html')
 
-def noticias_por_categoria(request, categoria):
-    return HttpResponse(f"Notícias da categoria {categoria}")
+def tecnologia(request):
+    return render(request, 'tecnologia.html')
 
-def autores(request):
-    return HttpResponse("Lista de autores de notícias")
+def politica(request):
+    return render(request, 'politica.html')
 
-def noticias_por_autor(request, id):
-    return HttpResponse(f"Notícias do autor com ID {id}")
+def economia(request):
+    return render(request, 'economia.html')
+
+def esportes(request):
+    return render(request, 'esportes.html')
+
+def cultura(request):
+    return render(request, 'cultura.html') 
