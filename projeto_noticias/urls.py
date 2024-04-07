@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base.views import inicio, noticia_por_categoria, pesquisar_noticias_por_categoria
+from noticias.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
