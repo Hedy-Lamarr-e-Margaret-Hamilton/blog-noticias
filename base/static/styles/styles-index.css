@@ -14,12 +14,12 @@ img {
 }
 
 a {
-    color: rgb(193, 68, 89); 
+    color: #B269DD; 
 }
 
 a:hover {
     text-decoration: none;
-    color: rgb(109, 17, 32); 
+    color: #f4dfff; 
 }
 
 .container-fluid {
@@ -41,11 +41,11 @@ a:hover {
 }
 
 .text-index {
-    color: rgb(193, 68, 89); 
+    color: #f4dfff; 
 }
 
 .categoria {
-    background-color: red;
+    background-color: #B269DD;
     color: aliceblue;
     text-align: left;
     width: fit-content;
