@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Notícias por Categoria - {{ categoria }}</title>
-</head>
-<body>
-    <h1>Notícias da Categoria: {{ categoria }}</h1>
+{% extends 'layout.html' %}
+{% block title %}{{ categoria }}{% endblock %}
+{% block content %}
+
+<main>
+    <h1>Notícias de {{ categoria }}</h1>
     <img src="{{ categoria_info.imagem }}" alt="{{ categoria_info.nome }}">
     <ul>
         {% for noticia in noticias %}
             <li>
                 <h2>{{ noticia.titulo }}</h2>
-                <p>{{ noticia.conteudo }}</p>
-                <p>Autor - {{ noticia.autor }} - {{ noticia.data }}</p>
+                <h3>Autora: {{ noticia.autora }} – Data {{ noticia.data }} </h3>
+                <p>{{ noticia.conteudo|truncatewords:30 }}...</p>
             </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+</main>
+
+{% endblock %}
