@@ -10,7 +10,7 @@
       </a>
     </ul>
     
-      <form action="" method="POST" role="search" class="form-inline my-2 my-lg-0">
+      <form action="{% url 'pesquisar_noticias' %}" method="POST" role="search" class="form-inline my-2 my-lg-0">
         {% csrf_token %}
         <input class="form-control  mr-sm-2" type="search" name="search_query" id="search-input" placeholder="Buscar" aria-label="Search">
         <button class="btn my-2 my-sm-0" id="search-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0,0,256,256">

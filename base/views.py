@@ -1,12 +1,21 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
 from noticias.models import Noticia
 
-
-# Create your views here.
-
 def inicio(request):
+    #noticias_urgentes
+    #ultimas_noticias (puxar as mais recentes)
     return render(request, 'index.html')
+
+def pesquisar_noticias(request):
+    pesquisa_formulario = request.POST.get('search_query')
+    if pesquisa_formulario:
+        noticias = Noticia.objects.filter(conteudo__icontains=pesquisa_formulario)
+        return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'pesquisa_formulario': pesquisa_formulario})
+    else:
+        return render(request, 'pesquisa_nao_encontrada.html', {'pesquisa_formulario': pesquisa_formulario})
+
+def pesquisa_nao_encontrada(request):
+    return render(request, 'pesquisa_nao_encontrada.html')
 
 def noticia(request):
     return render(request, 'criar_noticia.html', {})

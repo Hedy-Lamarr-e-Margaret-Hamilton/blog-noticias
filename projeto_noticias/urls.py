@@ -16,12 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from base.views import inicio, noticia_por_categoria, pesquisar_noticias_por_categoria
+
+from base.views import inicio, noticia_por_categoria, pesquisar_noticias_por_categoria, pesquisar_noticias, pesquisa_nao_encontrada
 from noticias.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
+    path('pesquisar/', pesquisar_noticias, name='pesquisar_noticias'),
+    path('pesquisa_nao_encontrada/', pesquisa_nao_encontrada, name="pesquisa_nao_encontrada"),
     path('pesquisar/<str:categoria>/', pesquisar_noticias_por_categoria, name='pesquisar_noticias_por_categoria'),
     path('comentarios/', include('comentarios.urls', namespace='comentarios')),
     path('usuario/', include('usuario.urls', namespace='usuario')),
