@@ -2,14 +2,14 @@ from django.shortcuts import render, redirect
 from noticias.models import Noticia
 
 def inicio(request):
-    #noticias_urgentes
-    #ultimas_noticias (puxar as mais recentes)
-    return render(request, 'index.html')
+    noticias_urgentes = Noticia.objects.filter(destaque=True, status='Aprovado')
+    ultimas_noticias = Noticia.objects.filter(destaque=False, status='Aprovado').order_by('-data')[:10]  
+    return render(request, 'index.html', {'noticias_urgentes': noticias_urgentes, 'ultimas_noticias': ultimas_noticias})
 
 def pesquisar_noticias(request):
     pesquisa_formulario = request.POST.get('search_query')
     if pesquisa_formulario:
-        noticias = Noticia.objects.filter(conteudo__icontains=pesquisa_formulario)
+        noticias = Noticia.objects.filter(conteudo__icontains=pesquisa_formulario, status='Aprovado')
         return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'pesquisa_formulario': pesquisa_formulario})
     else:
         return render(request, 'pesquisa_nao_encontrada.html', {'pesquisa_formulario': pesquisa_formulario})
@@ -22,11 +22,11 @@ def noticia(request):
 
 def pesquisar_noticias_por_categoria(request, categoria):
     # Pesquisar notícias com base na categoria
-    noticias = Noticia.objects.filter(categoria=categoria)
+    noticias = Noticia.objects.filter(categoria=categoria, status='Aprovado')
     return render(request, 'pesquisar_noticias.html', {'noticias': noticias})
 
 def noticia_por_categoria(request, categoria=None):
-    noticias = Noticia.objects.all()  # Retorna todas as notícias por padrão
+    noticias = Noticia.objects.filter(status='Aprovado')  # Retorna todas as notícias por padrão
     
     if categoria:
         noticias = noticias.filter(categoria=categoria)
