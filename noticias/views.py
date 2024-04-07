@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from noticias.forms import NoticiaForm
 from noticias.models import Noticia
 
@@ -21,3 +21,17 @@ def painel_noticias(request):
     noticias = Noticia.objects.filter(status='Pendente')
 
     return render(request, 'painel_noticias.html', {'noticias': noticias})
+
+def aprovar_noticia(request, id_noticia):
+    noticia = Noticia.objects.get(id=id_noticia)
+    noticia.status = 'Aprovado'
+    noticia.save()
+
+    return redirect('noticias:painel_noticias')
+
+def reprovar_noticia(request, id_noticia):
+    noticia = Noticia.objects.get(id=id_noticia)
+    noticia.status = 'Reprovado'
+    noticia.save()
+
+    return redirect('noticias:painel_noticias')
