@@ -13,4 +13,8 @@ class User(models.Model):
     senha = models.CharField(max_length=50)
     role = models.CharField(max_length=8, choices=roles)
     data = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Usuário'
+        verbose_name_plural = 'Usuários'
     
