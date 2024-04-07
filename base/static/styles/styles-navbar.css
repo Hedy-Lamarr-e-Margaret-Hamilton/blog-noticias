@@ -1,0 +1,66 @@
+.navbar-first {
+    background-color: #ffc0cb;
+    height: 2.5rem;
+}
+
+/* Navbar do logo */
+.navbar-second {
+    border-color: pink;
+    border-style:solid;
+    border-width: 3px 0;
+    height:max-content;
+    padding: 2rem;
+    background-color: white;
+}
+
+.logo {
+    left: 50%;
+}
+
+.form-inline {
+    flex-flow: nowrap;
+}
+
+#search-input {
+    border-color: pink;
+    margin-right:4%;
+}
+
+#search-submit {
+    background-color: #ffc0cb;
+    border-style:solid;
+    border-width: 3px 0;
+    border-color: pink;
+    color: #520914;
+    padding: 0.1rem 0.5rem;
+}
+
+/* Navbar das categorias*/
+.navbar-third {
+    border: solid grey;
+    border-width: 0  0 1px 0 ;
+    align-items:center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 767.98px) {
+    .navbar-third {
+        border: 0;
+    }
+}
+
+.nav-about {
+    list-style-type: none;
+    align-self: flex-end;
+    color: #212529;     
+}
+
+.nav-link-about{
+    color: rgba(0,0,0,.5);
+}
+
+.nav-link-about:hover {
+    color: black;
+}
+
+
