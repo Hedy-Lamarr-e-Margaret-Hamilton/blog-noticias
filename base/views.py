@@ -63,3 +63,9 @@ def esportes(request):
 
 def cultura(request):
     return render(request, 'cultura.html') 
+
+def quem_somos(request):
+    return render(request, 'quem_somos.html')
+
+def sobre(request):
+    return render(request, 'sobre.html')

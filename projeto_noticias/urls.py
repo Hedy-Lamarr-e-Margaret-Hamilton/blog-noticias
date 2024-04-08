@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from base.views import inicio, noticia_por_categoria, pesquisar_noticias_por_categoria, pesquisar_noticias, pesquisa_nao_encontrada
+from base.views import inicio, noticia_por_categoria, pesquisar_noticias_por_categoria, pesquisar_noticias, pesquisa_nao_encontrada, quem_somos, sobre
 from noticias.views import *
 
 
@@ -36,6 +36,7 @@ urlpatterns = [
     path('economia/', noticia_por_categoria, {'categoria': 'economia'}, name='economia'),
     path('esportes/', noticia_por_categoria, {'categoria': 'esportes'}, name='esportes'),
     path('cultura/', noticia_por_categoria, {'categoria': 'cultura'}, name='cultura'),
-   
+    path('quem_somos/', quem_somos, name='quem_somos'),
+    path('sobre/', sobre, name='sobre')
     
 ]
