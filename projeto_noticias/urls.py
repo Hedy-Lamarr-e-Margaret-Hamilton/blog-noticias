@@ -29,6 +29,7 @@ urlpatterns = [
     path('pesquisar/<str:categoria>/', pesquisar_noticias_por_categoria, name='pesquisar_noticias_por_categoria'),
     path('comentarios/', include('comentarios.urls', namespace='comentarios')),
     path('usuario/', include('usuario.urls', namespace='usuario')),
+    path('noticias/', include('noticias.urls', namespace='noticias')),
     path('noticia/categoria/<str:categoria>/', noticia_por_categoria, name='noticia_por_categoria'),
     # Adicione URLs para cada categoria
     path('tecnologia/', noticia_por_categoria, {'categoria': 'tecnologia'}, name='tecnologia'),
