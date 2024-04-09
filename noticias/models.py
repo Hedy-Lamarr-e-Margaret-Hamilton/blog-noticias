@@ -17,9 +17,7 @@ class Noticia(models.Model):
         ('Reprovado', 'Reprovado'),
     )
 
-    autora = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
     titulo = models.CharField(max_length=200)
-    sub_titulo = models.CharField(max_length=200, default=None)
     data = models.DateField(help_text='dd/mm/aaaa')
     categoria = models.CharField(max_length=50, choices=categorias)
     conteudo = models.TextField()
