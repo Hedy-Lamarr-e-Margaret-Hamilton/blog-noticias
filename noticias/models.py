@@ -7,7 +7,7 @@ class Noticia(models.Model):
         ('Esporte', 'Esporte'),
         ('Cultura', 'Cultura'),
         ('Economia', 'Economia'),
-        ('Política', 'Politica'),
+        ('Politica', 'Politica'),
         ('Tecnologia', 'Tecnologia'),
     )
 
@@ -23,7 +23,7 @@ class Noticia(models.Model):
     conteudo = models.TextField()
     destaque = models.BooleanField()
     imagem = models.CharField(max_length=200)
-    status = models.CharField(max_length=50, choices=status_noticia)
+    status = models.CharField(max_length=50, choices=status_noticia, default=status_noticia[0][0])
 
 
 def __str__(self):

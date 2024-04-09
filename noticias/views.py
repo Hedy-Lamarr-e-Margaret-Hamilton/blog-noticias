@@ -35,3 +35,8 @@ def reprovar_noticia(request, id_noticia):
     noticia.save()
 
     return redirect('noticias:painel_noticias')
+
+def visualizar_noticia(request, id_noticia):
+    noticia = Noticia.objects.get(id=id_noticia)
+
+    return render(request, 'noticia_por_id.html', {'noticia': noticia})
