@@ -10,6 +10,7 @@ def criar_user(request):
     if form.is_valid():
         sucesso = True
         form.save()
+        return redirect('usuario:login')
         
     contexto = {
         'form': form,
