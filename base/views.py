@@ -69,3 +69,9 @@ def quem_somos(request):
 
 def sobre(request):
     return render(request, 'sobre.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def criar_usuario(request):
+    return render(request, 'criar_usuario.html')
