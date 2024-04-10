@@ -1,5 +1,5 @@
 from django.urls import path
-from noticias.views import criar_noticia, painel_noticias, aprovar_noticia, reprovar_noticia
+from noticias.views import criar_noticia, painel_noticias, aprovar_noticia, reprovar_noticia, visualizar_noticia
 
 app_name = 'Noticias'
 urlpatterns = [
