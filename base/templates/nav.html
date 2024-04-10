@@ -10,6 +10,15 @@
       </a>
     </ul>
     
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" style="margin-right: 5px;">
+          <a class="nav-link" href="{% url 'usuario:login' %}">Login</a>
+      </li>
+      <li class="nav-item" style="margin-right: 5px;">
+          <a class="nav-link" href="{% url 'usuario:criar_usuario' %}">Criar Usuário</a>
+      </li>
+  </ul>
+    
       <form action="{% url 'pesquisar_noticias' %}" method="POST" role="search" class="form-inline my-2 my-lg-0">
         {% csrf_token %}
         <input class="form-control  mr-sm-2" type="search" name="search_query" id="search-input" placeholder="Buscar" aria-label="Search">

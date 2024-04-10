@@ -7,7 +7,7 @@ class Noticia(models.Model):
         ('Esporte', 'Esporte'),
         ('Cultura', 'Cultura'),
         ('Economia', 'Economia'),
-        ('Política', 'Politica'),
+        ('Politica', 'Politica'),
         ('Tecnologia', 'Tecnologia'),
     )
 
@@ -17,15 +17,13 @@ class Noticia(models.Model):
         ('Reprovado', 'Reprovado'),
     )
 
-    autora = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
     titulo = models.CharField(max_length=200)
-    sub_titulo = models.CharField(max_length=200, default=None)
     data = models.DateField(help_text='dd/mm/aaaa')
     categoria = models.CharField(max_length=50, choices=categorias)
     conteudo = models.TextField()
     destaque = models.BooleanField()
     imagem = models.CharField(max_length=200)
-    status = models.CharField(max_length=50, choices=status_noticia)
+    status = models.CharField(max_length=50, choices=status_noticia, default=status_noticia[0][0])
 
 
 def __str__(self):
