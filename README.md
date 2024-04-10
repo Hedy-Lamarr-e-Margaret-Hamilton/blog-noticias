@@ -46,7 +46,7 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 
 〰Comando para criação de um projeto django 
 
-         🟣 django-admin startproject projeto_womakers .
+         🟣 django-admin startproject (nome do projeto) .
 
 〰Comando para rodar um projeto django
 
