@@ -65,15 +65,15 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 
 <h3>Integrantes da Squad:</h3>
 
-+ Amanda Dias -  [Github]() | [LinkedIn]()
++ Amanda Dias -  [Github](https://github.com/Agdakelda) | [LinkedIn](https://www.linkedin.com/in/amanda-dias-a-ferreira/)
 + Andréia Ferreira - [Github](https://github.com/andreiamferreira) | [LinkedIn](https://www.linkedin.com/in/andreiamferreira/)
 + Gabriella Mansur - [Github]() | [LinkedIn]()
-+ Jhenyffer Oliveira  - [Github]() | [LinkedIn](https://www.linkedin.com/in/jhenyfferoliveira/)
++ Jhenyffer Oliveira  - [Github](https://github.com/JhenyfferOliveira) | [LinkedIn](https://www.linkedin.com/in/jhenyfferoliveira/)
 + Laís Zahran  - [Github](https://github.com/laisrz) | [LinkedIn](https://www.linkedin.com/in/laisrz)
 + Laryssa Peçanha - [Github](https://github.com/laryscampark) | [LinkedIn](https://www.linkedin.com/in/laryssape%C3%A7anha/)
 + Marcella Amazonas - [Github](https://github.com/marcellaamazonas) | [LinkedIn](https://www.linkedin.com/in/marcellaamazonas/)
 + Mariana Amaral  - [Github](https://github.com/mariana1008) 
-+ Priscila Nakayama  - [Github]() | [LinkedIn](https://www.linkedin.com/in/priscila-nakayama/)
++ Priscila Nakayama  - [Github](https://github.com/PuriNakayama) | [LinkedIn](https://www.linkedin.com/in/priscila-nakayama/)
 
 ---
 
