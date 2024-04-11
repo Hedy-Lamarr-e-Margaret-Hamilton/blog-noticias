@@ -29,7 +29,6 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 
          🟣 pip install virtualenv
    
-    
 〰Criação do ambiente virtual
 
          🟣 python -m venv venv   
@@ -42,33 +41,39 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 
 〰Ativação do ambiente virtual
   
-         🟣 scripts/activate
+         🟣 scripts/activate.
+         
+〰Caso tenha problema de ativação do ambiente virtual realize os seguintes comandos
 
-〰Comando para criação de um projeto django 
+        🟣 Get-ExecutionPolicy (Este comando é usado para verificar a política de execução atual no seu ambiente PowerShell)
 
-         🟣 django-admin startproject (nome do projeto) .
+        🟣 Set-ExecutionPolicy RemoteSigned -Scope Process (Este comando é usado para alterar a política de execução no seu ambiente PowerShell. O parâmetro RemoteSigned permite que scripts baixados sejam executados, desde que estejam assinados por um editor confiáve)
+
+〰Comando para gerenciar o banco de dados
+
+         🟣 python manage.py flush (Este comando irá limpar todo o banco de dados, removendo todas as entradas. Ele pedirá que você confirme a operação digitando ‘yes’)
+         
+         🟣 python manage.py makemigrations (Este comando é usado para criar migrações para as alterações que você fez nos modelos do seu projeto Django)
+         
+         🟣 python manage.py migrate (Este comando aplica as migrações (ou seja, realiza as alterações) ao banco de dados)
 
 〰Comando para rodar um projeto django
 
          🟣 python manage.py runserver
 
-〰Comando para criação de um app
-
-         🟣 python manage.py startapp base
-
 ---
 
 <h3>Integrantes da Squad:</h3>
 
-+ Amanda Dias
-+ Andréia Ferreira
-+ Gabriella Mansur
-+ Jhenyffer Oliveira
-+ Laís Zahran
-+ Laryssa Peçanha
-+ Marcella Amazonas
-+ Mariana Amaral
-+ Priscila Nakayama
++ Amanda Dias -  [Github]() | [LinkedIn]()
++ Andréia Ferreira - [Github]() | [LinkedIn]()
++ Gabriella Mansur - [Github]() | [LinkedIn]()
++ Jhenyffer Oliveira  - [Github]() | [LinkedIn]()
++ Laís Zahran  - [Github]() | [LinkedIn]()
++ Laryssa Peçanha - [Github](https://github.com/laryscampark) | [LinkedIn]()
++ Marcella Amazonas - [Github]() | [LinkedIn]()
++ Mariana Amaral  - [Github]() | [LinkedIn]()
++ Priscila Nakayama  - [Github]() | [LinkedIn]()
 
 ---
 
