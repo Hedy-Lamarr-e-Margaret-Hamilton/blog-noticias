@@ -10,9 +10,9 @@ def pesquisar_noticias(request):
     pesquisa_formulario = request.POST.get('search_query')
     if pesquisa_formulario:
         noticias = Noticia.objects.filter(conteudo__icontains=pesquisa_formulario, status='Aprovado')
-        return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'pesquisa_formulario': pesquisa_formulario})
-    else:
-        return render(request, 'pesquisa_nao_encontrada.html', {'pesquisa_formulario': pesquisa_formulario})
+        if noticias.exists():
+            return render(request, 'pesquisar_noticias.html', {'noticias': noticias, 'pesquisa_formulario': pesquisa_formulario})
+    return pesquisa_nao_encontrada(request)
 
 def pesquisa_nao_encontrada(request):
     return render(request, 'pesquisa_nao_encontrada.html')
