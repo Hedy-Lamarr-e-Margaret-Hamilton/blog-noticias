@@ -31,12 +31,9 @@ urlpatterns = [
     path('usuario/', include('usuario.urls', namespace='usuario')),
     path('noticias/', include('noticias.urls', namespace='noticias')),
 
-    # Acho q podemos mover essas rotas para dentro de urls de noticias pra ficar mais organizado
     path('noticia/categoria/<str:categoria>/', noticia_por_categoria, name='noticia_por_categoria'),
     path('noticia/id/<int:id_noticia>/', visualizar_noticia, name='visualizar_noticia'),
 
-    # Adicione URLs para cada categoria
-    # Essas rotas podem ser removidas pois a rota noticia/categoria/<str:categoria>/ já cobre todas as categorias
     path('tecnologia/', noticia_por_categoria, {'categoria': 'tecnologia'}, name='tecnologia'),
     path('politica/', noticia_por_categoria, {'categoria': 'politica'}, name='politica'),
     path('economia/', noticia_por_categoria, {'categoria': 'economia'}, name='economia'),
@@ -45,5 +42,4 @@ urlpatterns = [
 
     path('quem_somos/', quem_somos, name='quem_somos'),
     path('sobre/', sobre, name='sobre')
-    
 ]
