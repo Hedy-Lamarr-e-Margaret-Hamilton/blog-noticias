@@ -3,16 +3,24 @@
 {% block content %}
 
 <main>
-    <h1 align="center">Notícias Encontradas:</h1>
-    <ul>
-        {% for noticia in noticias %}
-            <li>
-                <h2>{{ noticia.titulo }}</h2>
-                <h3>Autora: {{ noticia.autora }} – Data: {{ noticia.data }}</h3>
-                <p>{{ noticia.conteudo|truncatewords:30 }}...</p>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container-fluid">
+        <section>
+            <h1 align="center">Notícias Encontradas:</h1>
+            <div class="row">
+                {% for noticia in noticias %}
+                    <div class="col-md-4">
+                        <div>
+                            <a href="/noticia/id{{noticia.id}}">
+                                <img class="img_destaques" src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+                                <h2>{{ noticia.titulo }}</h2>
+                                <h6>Data: {{ noticia.data }}</h6>
+                                <p>{{ noticia.conteudo|truncatewords:20 }}</p> 
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+        </section>
+    </div>
 </main>
 
 {% endblock %}

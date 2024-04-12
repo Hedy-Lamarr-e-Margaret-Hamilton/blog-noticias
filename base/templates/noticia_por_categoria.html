@@ -1,24 +1,24 @@
 {% extends 'layout.html' %}
-{% block title %}{{ noticia.categoria }}{% endblock %}
+{% block title %}{{ categoria }}{% endblock %}
 {% block content %}
 
 <main>
     <div class="container-fluid">
         <section>
             <h1 align="center">Notícias de {{ categoria }}</h1>
-            <div class="col-xs-12 col-md-5 bottom-row">
-                    <ul>
-                        {% for noticia in noticias %}
-                            <lu>
-                                <a href="/noticia/id/{{noticia.id}}">
-                                    <img class="imagem-manchete" src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
-                                    <h2>{{ noticia.titulo }}</h2>
-                                    <h3>Data {{ noticia.data }} </h3>
-                                    <p>{{ noticia.conteudo|truncatewords:30 }}</p>
-                                </a>
-                            </lu>
-                        {% endfor %}
-                    </ul>
+            <div class="row">
+                {% for noticia in noticias %}
+                    <div class="col-md-4">
+                        <div class="bottom-row">
+                            <a href="/noticia/id/{{noticia.id}}">
+                                <img class="img_destaques" src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}">
+                                <h2>{{ noticia.titulo }}</h2>
+                                <h6>Data: {{ noticia.data }}</h6>
+                                <p>{{ noticia.conteudo|truncatewords:20 }}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </section>
     </div>
