@@ -72,7 +72,7 @@ O projeto visa fornecer funcionalidades para autores, editores e leitores, facil
 + Laís Zahran  - [Github](https://github.com/laisrz) | [LinkedIn](https://www.linkedin.com/in/laisrz)
 + Laryssa Peçanha - [Github](https://github.com/laryscampark) | [LinkedIn](https://www.linkedin.com/in/laryssape%C3%A7anha/)
 + Marcella Amazonas - [Github](https://github.com/marcellaamazonas) | [LinkedIn](https://www.linkedin.com/in/marcellaamazonas/)
-+ Mariana Amaral  - [Github](https://github.com/mariana1008) 
++ Mariana Amaral  - [Github](https://github.com/mariana1008) | [LinkedIn](https://www.linkedin.com/in/mariana-santana-amaral-96aa53119/)
 + Priscila Nakayama  - [Github](https://github.com/PuriNakayama) | [LinkedIn](https://www.linkedin.com/in/priscila-nakayama/)
 
 ---
